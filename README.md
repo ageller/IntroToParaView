@@ -53,9 +53,11 @@ output.PointData.append(10**T, 'linearT')
 output.PointData.append(10**D, 'linearD')
 ```
 
+12. Modify the view of this Filter. 
     - Change the Representation to Volume or Surface.
     - Change the Coloring to one of these new arrays.
     - Apply a Threshold (or other) to this (from the top bar).
-12.	File / Export Scene
+13.	File / Export Scene
     - I chose an eps format (this would need a lot of work to make it publication ready). 
-    - You can also export to [x3dom](https://www.x3dom.org/), which is a format allowed by certain journals for interactive online figures .
+    - You can also export to [x3dom](https://www.x3dom.org/), which is a format allowed by certain journals for interactive online figures.
+14. With the time remaining, explore these data by adding other Filters, modifying colors, changing views, etc. . 
