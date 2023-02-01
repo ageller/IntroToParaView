@@ -41,7 +41,8 @@ The files in the data/ directory are from [Pascal Paschos](https://efi.uchicago.
     - Click Apply.
 11.	Add Filters / Data Analysis / Programmable Filter by selecting both Density and Temperature (Ctrl + click).
     - Add the following Script. (You may need to swap inputs order depending on how you loaded the data):
-'''
+    
+```
 D = inputs[0].PointData['Density']
 T = inputs[1].PointData['Temperature']
 output.PointData.append(D*T, 'multiply')
@@ -50,7 +51,8 @@ output.PointData.append(D+T, 'add')
 output.PointData.append(cos(T), 'cosT')
 output.PointData.append(10**T, 'linearT')
 output.PointData.append(10**D, 'linearD')
-'''
+```
+
     - Change the Representation to Volume or Surface.
     - Change the Coloring to one of these new arrays.
     - Apply a Threshold (or other) to this (from the top bar).
