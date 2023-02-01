@@ -41,7 +41,7 @@ The files in the data/ directory are from [Pascal Paschos](https://efi.uchicago.
     - Click Apply.
 11.	Add Filters / Data Analysis / Programmable Filter by selecting both Density and Temperature (Ctrl + click).
     - Add the following Script. (You may need to swap inputs order depending on how you loaded the data):
-    
+
 ```
 D = inputs[0].PointData['Density']
 T = inputs[1].PointData['Temperature']
@@ -60,4 +60,4 @@ output.PointData.append(10**D, 'linearD')
 13.	File / Export Scene
     - I chose an eps format (this would need a lot of work to make it publication ready). 
     - You can also export to [x3dom](https://www.x3dom.org/), which is a format allowed by certain journals for interactive online figures.
-14. With the time remaining, explore these data by adding other Filters, modifying colors, changing views, etc. . 
+14. With the time remaining, explore these data by adding other Filters, modifying colors, changing views, etc. 
