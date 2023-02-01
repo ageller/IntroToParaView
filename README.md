@@ -60,4 +60,9 @@ output.PointData.append(10**D, 'linearD')
 13.	File / Export Scene
     - I chose an eps format (this would need a lot of work to make it publication ready). 
     - You can also export to [x3dom](https://www.x3dom.org/), which is a format allowed by certain journals for interactive online figures.
-14. With the time remaining, explore these data by adding other Filters, modifying colors, changing views, etc. 
+14. With the time remaining, explore these data by adding other Filters, modifying colors, changing views, etc.
+
+
+### A final note on getting data into ParaView
+
+ParaView can read and load a large number of different file types.  But I often find that my particular data/file type is either not one that ParaView recognizes or there is some error when trying to load it into ParaView.  In my experience, ParaView is most happy with .vtk files.  Luckily Python has a few packages that can convert appropriate data into .vtk files.  In the past, I've successfully used [PyEVTK](https://github.com/paulo-herrera/PyEVTK) for this task.
