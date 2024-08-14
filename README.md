@@ -30,16 +30,16 @@ The files in the data/ directory are from [Pascal Paschos](https://efi.uchicago.
     - I chose from -2 to 2 with 20 linear steps.
     - (You may need/want to remove the initial value that was created by default, using the "-" button.)
     - Click Apply.
-9.	Add a Filters / Data Analysis / Calculator to the Temperature.
+9.	Add a Filters / Programmable / Calculator to the Temperature.
     - The original data in this file is log_10(Temperature).
     - I entered 10^Temperature, and used "Linear" as the "Result Array Name".  (Click Apply.)
 10.	Add a Clip to the Temperature - Calculator (from the top bar).
     - Copy the same positions from the Density Slice to the Temperature Clip.
-    - You may want to move it down just a touch so that the contours a more visible.
+    - You may want to move it down just a touch so that the contours are more visible.
     - Change the Representation to Surface (if not already set by default).
     - Change Coloring to Linear (and back for comparison with the original logarithmic Temperature).
     - Click Apply.
-11.	Add Filters / Data Analysis / Programmable Filter by selecting both Density and Temperature (Ctrl + click).
+11.	Add Filters / Programmable / Programmable Filter by selecting both Density and Temperature (Ctrl + click).
     - Add the following Script. (You may need to swap inputs order depending on how you loaded the data):
 
 ```
