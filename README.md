@@ -16,7 +16,7 @@ The files in the data/ directory are from [Pascal Paschos](https://efi.uchicago.
 3.	Change the Representation to Volume, and check that the Coloring is set to Density (may already be set this way by default).
 4.	Do similarly for Temperature.
 5.	Change the Color Map for Density and/or Temperature.
-    - Coloring / Edit / Choose Presets (folder with heart, on the right side of window)
+    - Coloring / Edit  -> "Select a color map from default presets" dropdown menu.  (You can also access this from the folder+heart icon on the right side of window.)
     - I kept the blue-red for Temperature but tweaked the curve a bit.
     - I changed the Density to green and inverted (white circle with black triangle).
     - Click Apply when you're happy with the color choices.
@@ -27,20 +27,21 @@ The files in the data/ directory are from [Pascal Paschos](https://efi.uchicago.
 7.	Hide the Density and Temperature, to view only the Slice.
 8.	Add a Contour to the Slice (from the top bar).
     - In Value Range select "add a range of values" (icon that looks like a plot axis).
-    - I chose from -2 to 2 with 20 linear steps.
+    - I chose from -2 to 2 with 21 linear steps.
     - (You may need/want to remove the initial value that was created by default, using the "-" button.)
     - Click Apply.
 9.	Add a Filters / Programmable / Calculator to the Temperature.
     - The original data in this file is log_10(Temperature).
-    - I entered 10^Temperature, and used "Linear" as the "Result Array Name".  (Click Apply.)
+    - I entered `10^Temperature`, and used "Linear" as the "Result Array Name".  (Click Apply.)
+    - To view this new Linear data, change the Representation to Volume, and Coloring to Linear.
 10.	Add a Clip to the Temperature - Calculator (from the top bar).
     - Copy the same positions from the Density Slice to the Temperature Clip.
     - You may want to move it down just a touch so that the contours are more visible.
     - Change the Representation to Surface (if not already set by default).
-    - Change Coloring to Linear (and back for comparison with the original logarithmic Temperature).
+    - Change Coloring to Linear and then back to (log_10) Temperature to compare to the original logarithmic data.  Choose which Coloring you like best.
     - Click Apply.
-11.	Add Filters / Programmable / Programmable Filter by selecting both Density and Temperature (Ctrl + click).
-    - Add the following Script. (You may need to swap inputs order depending on how you loaded the data):
+11.	Select both Density and Temperature (Ctrl + click Density + click Temperature) and add Filters / Programmable / Programmable Filter by .
+    - Add the following Script. (You may need to swap inputs order depending on how you loaded the data and/or the order that you clicked in ParaView's browser):
 
 ```
 D = inputs[0].PointData['Density']
